@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p,h1,a,h2{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+.header-container{
+    background-color: #181818;
+}
+.header{
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+}
+.navbar{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logo a img {
+    height: 100px;
+    width: 100px;
+    padding-top: 20px;
+}
+.navbar-links{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-links  a{
+    text-decoration: none;
+    color: white;
+}
+.header-content{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-content-illustration img{ 
+    height: 550px;
+    width: 600px;
+}
+.header-content-text{
+    width: 450px;
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content-text h1{
+    font-size: 60px;
+    font-weight: lighter;
+    color: #FABD3A;
+    padding-bottom: 25px;
+}
+.header-content-text .first-p{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+.header-content-text .second-p{
+    font-size: 30px;
+}
+.hamburger{
+    display: none;
+}
+/*---------------RESPONSIVE-PART--------------*/
+@media screen and (max-width:900px) { 
+    .header-content-illustration img{
+        display: none;
+    }
+    .header-content-text{
+        margin: auto;
+    }
+    .hamburger{
+        position: absolute;
+         right: 5%;
+         top: 20px;
+         display: inline;
+         cursor: pointer;
+         z-index: 2;
+    }
+    ion-icon {
+        font-size: 60px;
+        color: white;
+      }
+      .logo  {
+          padding-left: 40px;
+      }
+    .header{
+        width: 100%;
+        position: relative;
+    }
+    .navbar-links{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #FABD3A;
+        height: 100vh;
+        width: 100%;
+        clip-path: circle(100px at 95% -20%);
+        -webkit-clip-path : circle(100px at 95% -20%);
+        transition: all 1s ease-out;
+        }
+        .navbar-links.open{
+            clip-path: circle(1000px at 50% -10%);
+            -webkit-clip-path : circle(1000px at 50% -10%);
+        }
+    .navbar-links a{
+        color: #181818;
+        font-size: larger;
+    }
+
+}
+
+/*----------------------- ABOUT-PART --------------------------*/
+.About-container{
+    background-color: #FABD3A;
+}
+.About-part{
+    width: 80%;
+    height: 350px;
+    margin: auto;
+}
+.About-part h1{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 60px;
+    color:#181818 ;
+    text-align: center;
+}
+.About-part p{
+    font-size: 30px;
+    color:#181818 ;
+    text-align: center;
+}
+@media screen and (max-width:900px) { 
+    .About-part p{
+        font-size: 23px;
+    }
+    .About-part h1{
+        padding-bottom: 20px;
+        font-size: 50px;
+    }
+}
+
+/*----------------------- LICENCE-PART --------------------------*/
+.Licence-container{
+    background-color: #181818;
+    border-bottom: 3px solid #282828;
+}
+.licence{
+    height: 100vh;
+    width: 90%;
+    margin:auto;
+}
+.licence h1{
+    text-align: center ;
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.licence-semestres{
+    height: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+}
+.semestre{
+    height: 100%;
+    width: 40%;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.modules{
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.semestre h2{
+    padding-top: 10px;
+    color:#FABD3A ;
+    font-size: 40px;
+}
+.modules a{
+    text-decoration: none;
+    font-size: 23px;
+
+}
+@media screen and (max-width:900px) { 
+    .container {
+        width: 70%;
+        height: 600px; 
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        }
+    .semestre{
+        height: 70px;
+        width: 100%;
+        margin: 5px;
+        padding-bottom: 5px;
+        border-radius: 25px;
+        flex-grow: 1;
+        transition: flex-grow 0.4s ease-out;
+        position: relative;
+        overflow: hidden;
+    }
+    .active {
+        flex-grow: 10000;
+    }
+    .bloc > * {
+        pointer-events: none;
+    }
+    .licence h1{
+        text-align: center ;
+        font-size: 45px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .contenu a{
+        pointer-events: auto!important;
+    }
+  
+}
